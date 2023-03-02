@@ -31,6 +31,8 @@ type CreateImageRequest struct {
 	User *string `json:"user,omitempty"`
 }
 
+
+
 // NewCreateImageRequest instantiates a new CreateImageRequest object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
@@ -40,9 +42,9 @@ func NewCreateImageRequest(prompt string) *CreateImageRequest {
 	this.Prompt = prompt
 	var n int32 = 1
 	this.N = *NewNullableInt32(&n)
-	var size SIZE = "1024x1024"
+	var size string = "1024x1024"
 	this.Size = *NewNullableString(&size)
-	var responseFormat RESPONSE_FORMAT = "url"
+	var responseFormat string = "url"
 	this.ResponseFormat = *NewNullableString(&responseFormat)
 	return &this
 }
@@ -54,9 +56,9 @@ func NewCreateImageRequestWithDefaults() *CreateImageRequest {
 	this := CreateImageRequest{}
 	var n int32 = 1
 	this.N = *NewNullableInt32(&n)
-	var size SIZE = "1024x1024"
+	var size string = "1024x1024"
 	this.Size = *NewNullableString(&size)
-	var responseFormat RESPONSE_FORMAT = "url"
+	var responseFormat string = "url"
 	this.ResponseFormat = *NewNullableString(&responseFormat)
 	return &this
 }

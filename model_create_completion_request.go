@@ -58,7 +58,7 @@ type CreateCompletionRequest struct {
 func NewCreateCompletionRequest(model string) *CreateCompletionRequest {
 	this := CreateCompletionRequest{}
 	this.Model = model
-	var prompt CreateCompletionRequestPrompt = <|endoftext|>
+	var prompt CreateCompletionRequestPrompt = CreateCompletionRequestPrompt{}
 	this.Prompt = *NewNullableCreateCompletionRequestPrompt(&prompt)
 	var maxTokens int32 = 16
 	this.MaxTokens = *NewNullableInt32(&maxTokens)
@@ -72,7 +72,7 @@ func NewCreateCompletionRequest(model string) *CreateCompletionRequest {
 	this.Stream = *NewNullableBool(&stream)
 	var echo bool = false
 	this.Echo = *NewNullableBool(&echo)
-	var stop CreateCompletionRequestStop = null
+	var stop CreateCompletionRequestStop = CreateCompletionRequestStop{} 
 	this.Stop = *NewNullableCreateCompletionRequestStop(&stop)
 	var presencePenalty float32 = 0
 	this.PresencePenalty = *NewNullableFloat32(&presencePenalty)
@@ -88,7 +88,7 @@ func NewCreateCompletionRequest(model string) *CreateCompletionRequest {
 // but it doesn't guarantee that properties required by API are set
 func NewCreateCompletionRequestWithDefaults() *CreateCompletionRequest {
 	this := CreateCompletionRequest{}
-	var prompt CreateCompletionRequestPrompt = <|endoftext|>
+	var prompt CreateCompletionRequestPrompt = CreateCompletionRequestPrompt{}
 	this.Prompt = *NewNullableCreateCompletionRequestPrompt(&prompt)
 	var maxTokens int32 = 16
 	this.MaxTokens = *NewNullableInt32(&maxTokens)
@@ -102,7 +102,7 @@ func NewCreateCompletionRequestWithDefaults() *CreateCompletionRequest {
 	this.Stream = *NewNullableBool(&stream)
 	var echo bool = false
 	this.Echo = *NewNullableBool(&echo)
-	var stop CreateCompletionRequestStop = null
+	var stop CreateCompletionRequestStop = CreateCompletionRequestStop{}
 	this.Stop = *NewNullableCreateCompletionRequestStop(&stop)
 	var presencePenalty float32 = 0
 	this.PresencePenalty = *NewNullableFloat32(&presencePenalty)

@@ -74,7 +74,7 @@ func NewCreateAnswerRequest(model string, question string, examples [][]string, 
 	this.Temperature = *NewNullableFloat32(&temperature)
 	var maxTokens int32 = 16
 	this.MaxTokens = *NewNullableInt32(&maxTokens)
-	var stop CreateAnswerRequestStop = null
+	var stop CreateAnswerRequestStop = CreateAnswerRequestStop{}
 	this.Stop = *NewNullableCreateAnswerRequestStop(&stop)
 	var n int32 = 1
 	this.N = *NewNullableInt32(&n)
@@ -98,7 +98,7 @@ func NewCreateAnswerRequestWithDefaults() *CreateAnswerRequest {
 	this.Temperature = *NewNullableFloat32(&temperature)
 	var maxTokens int32 = 16
 	this.MaxTokens = *NewNullableInt32(&maxTokens)
-	var stop CreateAnswerRequestStop = null
+	var stop CreateAnswerRequestStop = CreateAnswerRequestStop{}
 	this.Stop = *NewNullableCreateAnswerRequestStop(&stop)
 	var n int32 = 1
 	this.N = *NewNullableInt32(&n)

@@ -60,7 +60,7 @@ func NewCreateChatCompletionRequest(model string, messages []ChatCompletionReque
 	this.N = *NewNullableInt32(&n)
 	var stream bool = false
 	this.Stream = *NewNullableBool(&stream)
-	var stop CreateChatCompletionRequestStop = null
+	var stop CreateChatCompletionRequestStop = CreateChatCompletionRequestStop{}
 	this.Stop = &stop
 	var presencePenalty float32 = 0
 	this.PresencePenalty = *NewNullableFloat32(&presencePenalty)
@@ -82,7 +82,7 @@ func NewCreateChatCompletionRequestWithDefaults() *CreateChatCompletionRequest {
 	this.N = *NewNullableInt32(&n)
 	var stream bool = false
 	this.Stream = *NewNullableBool(&stream)
-	var stop CreateChatCompletionRequestStop = null
+	var stop CreateChatCompletionRequestStop = CreateChatCompletionRequestStop{}
 	this.Stop = &stop
 	var presencePenalty float32 = 0
 	this.PresencePenalty = *NewNullableFloat32(&presencePenalty)
